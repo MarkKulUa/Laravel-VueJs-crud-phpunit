@@ -20,7 +20,25 @@ const routes = [
         name: 'companies.edit',
         component: CompaniesEdit,
         props: true
-    }
+    },
+    // {
+    //     path: '/import/contacts',
+    //     name: 'contacts.index',
+    //     component: ContactsIndex,
+    //     props: true
+    // },
+    // {
+    //     path: '/import/parse',
+    //     name: 'import.parse',
+    //     component: ImportParse,
+    //     props: true
+    // },
+    // {
+    //     path: '/import/process',
+    //     name: 'import.process',
+    //     component: ImportProcess,
+    //     props: true
+    // }
 ]
 
 export default createRouter({

@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/import', function () {
+    return view('import');
+})->middleware(['auth'])->name('import');
+
 require __DIR__.'/auth.php';
 
 Route::view('/{any}', 'dashboard')

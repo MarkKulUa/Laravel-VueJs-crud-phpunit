@@ -21,3 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('companies', CompanyController::class);
 
+Route::group(['prefix' => 'import', 'middleware' => 'auth:sanctum'], function () {
+    Route::get('/contacts', [\App\Http\Controllers\Api\ContactController::class, 'index'])->name('contacts.index');
+    Route::post('/import_parse', [\App\Http\Controllers\Api\ImportController::class, 'parseImport'])->name('import_parse');
+    Route::post('/import_process', [\App\Http\Controllers\Api\ImportController::class, 'processImport'])->name('import_process');
+});

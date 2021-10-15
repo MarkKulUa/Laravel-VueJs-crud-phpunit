@@ -1,27 +1,68 @@
 # Laravel-VueJs-crud-phpunit
 
-# How to use
-Clone the repository with git clone
+## How to use
 
-Copy .env.example file to .env and edit database credentials there
+Clone this project to your local computer.
 
-Run composer install
+```ps
+git clone https://github.com/mark-kul/Laravel-VueJs-crud-phpunit
+```
 
-Run php artisan key:generate
+Navigate to the project folder.
 
-Run php artisan migrate --seed
+```ps
+cd Laravel-VueJs-crud-phpunit
+```
 
-Run npm install
+Install required packages.
 
-Run npm run dev
+```ps
+composer install
+```
 
-Run php artisan serve
+```ps
+npm install
+```
 
-That's it - load the homepage, use Register link and use the CRUD
+create new .env file and edit database credentials there.
 
--- The test user email from seeder: "test@test.test", pass: "password"
+```ps
+cp .env.example .env
+```
 
--- ./vendor/bin/phpunit   --coverage-html storage/app/coverage
+Generate new app key.
 
-# License
+```ps
+php artisan key:generate
+```
+
+Run migrations. (it has some seeded data for your testing)
+
+```ps
+php artisan migrate --seed
+```
+
+To run server 
+
+```ps
+php artisan serve
+```
+
+### P.s.
+
+Login test credentials:
+```ps
+login: "test@test.test", pass: "password"
+```
+
+Run tests with coverage
+```ps
+./vendor/bin/phpunit --coverage-html storage/app/coverage
+```
+
+When changing JS files run
+```ps
+npm run dev
+```
+### License
 Please use and re-use however you want.
